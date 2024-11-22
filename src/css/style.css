@@ -232,7 +232,7 @@ header h1 a span {
 /* banner */
 
 .bg1 {
-  background: url(../images/bg2.jpg) no-repeat;
+  background: url(images/bg2.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -242,7 +242,7 @@ header h1 a span {
 }
 
 .bg2 {
-  background: url(../images/bg3.jpg) no-repeat;
+  background: url(images/bg3.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -252,7 +252,7 @@ header h1 a span {
 }
 
 .bg3 {
-  background: url(../images/bg.jpg) no-repeat;
+  background: url(images/bg.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -708,7 +708,7 @@ p.stap {
 /* video popup */
 
 .pop-bg {
-  background: url(../images/bg3.jpg) no-repeat center;
+  background: url(images/bg3.jpg) no-repeat center;
   background-size: cover;
   min-height: 35vw;
 }
@@ -993,7 +993,7 @@ p.Lor {
   border-radius: 10px;
 }
 .features {
-  background: url(../images/bg2.jpg) no-repeat center;
+  background: url(images/bg2.jpg) no-repeat center;
   background-size: cover;
 }
 .row.stats_inner.top-st {
@@ -1216,11 +1216,11 @@ a.facebook:hover {
   font-size: 0.95em;
 }
 .banner-1 {
-  background: url(../images/bg2.jpg) no-repeat;
+  background: url(images/bg2.jpg) no-repeat;
   height: 18vw;
 }
 .w3layouts_bottom {
-  background: url(../images/bg3.jpg) no-repeat 0px 0px;
+  background: url(images/bg3.jpg) no-repeat 0px 0px;
   text-align: center;
   background-size: cover;
   -webkit-background-size: cover;
