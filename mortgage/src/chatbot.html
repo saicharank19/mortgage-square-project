@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Chatbot</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f8fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .chat-container {
+      width: 380px;
+      max-width: 100%;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .chat-header {
+      background-color: #4b7bec;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-box {
+      padding: 20px;
+      background-color: #f9f9f9;
+      font-size: 14px;
+      color: #333;
+      flex-grow: 1;
+      overflow-y: auto;
+      max-height: 500px;
+    }
+
+    .message {
+      padding: 12px 15px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      max-width: 75%;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .bot-message {
+      background-color: #e3e4e8;
+      text-align: left;
+      border-radius: 10px;
+      padding: 12px 20px;
+      position: relative;
+    }
+
+    .bot-message::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 20px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #e3e4e8;
+    }
+
+    .user-message {
+      background-color: #4b7bec;
+      color: white;
+      text-align: right;
+      margin-left: auto;
+      border-radius: 10px;
+      padding: 12px 20px;
+      position: relative;
+    }
+
+    .user-message::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: 20px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #4b7bec;
+    }
+
+    .input-box {
+      display: flex;
+      padding: 12px 16px;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      justify-content: space-between;
+    }
+
+    .input-box input {
+      width: 80%;
+      padding: 8px 15px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .input-box input:focus {
+      border-color: #4b7bec;
+    }
+
+    .input-box button {
+      width: 48%;
+      padding: 10px;
+      margin: 0 4px;
+      font-size: 14px;
+      background-color: #4b7bec;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .input-box button:hover {
+      background-color: #3879d6;
+    }
+
+    .message {
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-header">Mortgage Chatbot</div>
+    <div class="chat-box" id="chatBox">
+      <div class="message bot-message">Hi! I'm here to assist you with home loans. Are you looking to buy a new home or refinance an existing property?</div>
+    </div>
+    <div class="input-box">
+      <button onclick="chooseOption('New home')">New Home</button>
+      <button onclick="chooseOption('Refinance')">Refinance</button>
+    </div>
+  </div>
+
+  <script>
+    let userDetails = {};
+
+    function chooseOption(option) {
+      addMessage(option, 'user-message');
+      
+      setTimeout(() => {
+        if (option === 'New home') {
+          addMessage("Great! Can you please provide your name?", 'bot-message');
+          showInputBox('name');
+          userDetails.intent = 'New home';
+        } else if (option === 'Refinance') {
+          addMessage("Got it! We can help with refinancing options to lower your monthly payments or reduce your loan term. Can you start by providing your name?", 'bot-message');
+          showInputBox('name');
+          userDetails.intent = 'Refinance';
+        }
+      }, 1000);
+    }
+
+    function addMessage(message, messageType) {
+      const chatBox = document.getElementById('chatBox');
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message', messageType);
+      messageDiv.textContent = message;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function showInputBox(type) {
+      const existingInputBox = document.querySelector('.input-box');
+      if (existingInputBox) existingInputBox.remove();
+
+      const chatBox = document.getElementById('chatBox');
+      const inputBox = document.createElement('div');
+      inputBox.classList.add('input-box');
+
+      const inputField = document.createElement('input');
+      inputField.type = 'text';
+      inputField.placeholder = `Enter your ${type}`;
+      inputField.id = `${type}Input`;
+
+      const submitButton = document.createElement('button');
+      submitButton.textContent = 'Submit';
+      submitButton.onclick = () => submitDetails(type);
+
+      inputBox.appendChild(inputField);
+      inputBox.appendChild(submitButton);
+
+      chatBox.appendChild(inputBox);
+    }
+
+    function submitDetails(type) {
+      const inputField = document.getElementById(`${type}Input`);
+      const value = inputField.value.trim();
+
+      if (value) {
+        userDetails[type] = value;
+        addMessage(value, 'user-message');
+        
+        inputField.value = '';
+
+        setTimeout(() => {
+          if (type === 'name') {
+            if (userDetails.intent === 'Refinance') {
+              addMessage("Thank you! To proceed with refinancing, could you please let us know your current loan balance?", 'bot-message');
+              showInputBox('loanBalance');
+            } else {
+              addMessage("Thank you! How much would you like to borrow?", 'bot-message');
+              showInputBox('loanAmount');
+            }
+          } else if (type === 'loanAmount') {
+            addMessage("How much do you plan to put down for the new home?", 'bot-message');
+            showInputBox('downPayment');
+          } else if (type === 'downPayment') {
+            addMessage("Are you interested in a fixed-rate or an adjustable-rate mortgage?", 'bot-message');
+            showInputBox('loanType');
+          } else if (type === 'loanType') {
+            addMessage("What is your current credit score?", 'bot-message');
+            showInputBox('creditScore');
+          } else if (type === 'creditScore') {
+            addMessage("What is your employment status (Employed, Self-Employed, Unemployed)?", 'bot-message');
+            showInputBox('employmentStatus');
+          } else if (type === 'employmentStatus') {
+            addMessage("What is your annual income?", 'bot-message');
+            showInputBox('annualIncome');
+          } else if (type === 'annualIncome') {
+            addMessage("Where are you looking to buy the new home? (Preferred location)", 'bot-message');
+            showInputBox('location');
+          } else if (type === 'location') {
+            addMessage("Thank you! We'll get back to you with home loan options soon.", 'bot-message');
+            sendDetailsToServer();
+          } else if (type === 'loanBalance') {
+            addMessage("What is the current interest rate on your loan?", 'bot-message');
+            showInputBox('interestRate');
+          } else if (type === 'interestRate') {
+            addMessage("Great! What is the remaining term on your current loan (in years)?", 'bot-message');
+            showInputBox('loanTerm');
+          } else if (type === 'loanTerm') {
+            addMessage("What is the value of your home?", 'bot-message');
+            showInputBox('homeValue');
+          } else if (type === 'homeValue') {
+            addMessage("Thank you for sharing all the details! We’ll contact you soon.", 'bot-message');
+            sendDetailsToServer();
+          }
+        }, 1000);
+      }
+    }
+
+    // Function to send user details to the server
+    function sendDetailsToServer() {
+      fetch('https://your-server-endpoint.com/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userDetails)
+      })
+      .then(response => response.json())
+      .then(data => {
+        addMessage("Your details have been sent successfully! We'll get back to you soon.", 'bot-message');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1266 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <title>
+      Home Loan a Banking Category Flat Bootstrap Responsive Website Template |
+      Gallery :: w3layouts
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta
+      name="keywords"
+      content="Home Loan Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+    />
+    <script>
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
+
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../src/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../src/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- font-awesome icons -->
+    <link href="../src/css/fontawesome-all.min.css" rel="stylesheet" />
+    <!-- //Custom Theme files -->
+    <link rel="stylesheet" href="../src/css/lightbox.css" />
+    <!-- For-gallery-CSS -->
+    <!-- online fonts -->
+    <!-- titles -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <!-- body -->
+    <link
+      href="//fonts.googleapis.com/css?family=Poppins:400,500,600,700,800"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+	<!-- <div class="top">
+			<div class="container">
+				<div class="t-op row">
+					<div class="col-sm-6 top-middle">
+						<ul>
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6 top-left">
+						<ul>
+							<li><i class="fas fa-phone"></i> +021 365 777</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="top1">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				
+				<h1>
+                <a class="navbar-brand text-capitalize" href="../index.html">
+                  <img
+                    src="../images/blank-logo-01.png"
+                    alt="logo"
+                    class="mortgage-logo"
+                  />
+                  <!-- Mortgage Square -->
+                </a>
+              </h1>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				    aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav text-center  ml-lg-auto">
+						<li class="nav-item mr-3">
+							<a class="nav-link" href="../index.html">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item  mr-3">
+							<a class="nav-link" href="about.html">About</a>
+						</li>
+						
+						<li class="nav-item active mr-3">
+							<a class="nav-link active" href="loan_calculator.html">Loan Calculator</a>
+						</li>
+						<li class="nav-item  mr-3">
+							<a class="nav-link" href="reviews.html">Reviews</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">contact</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		</div>
+	</header>
+    <!-- //header -->
+    <!-- banner -->
+
+    <!-- //banner -->
+
+    <body>
+      <div class="container">
+        <div class="container py-md-4 mt-md-3">
+          <h2 class="heading-agileinfo">
+            Borrowing Power Calculator<span
+              >Enter your income and expenses to estimate how much you may be
+              able to borrow for a home loan.</span
+            >
+          </h2>
+          <span class="w3-line black"></span>
+
+          <div class="calculator-tabs">
+            <button
+              class="tab-button active"
+              onclick="showCalculator(event, 'borrowing')"
+            >
+              Borrowing calculator
+            </button>
+            <button
+              class="tab-button"
+              onclick="showCalculator(event, 'repayment')"
+            >
+              Repayment calculator
+            </button>
+            <button class="tab-button" onclick="showCalculator(event, 'stamp')">
+              Stamp duty calculator
+            </button>
+            <button
+              class="tab-button"
+              onclick="showCalculator(event, 'refinance')"
+            >
+              Refinance calculator
+            </button>
+          </div>
+
+          <!-- Borrowing Calculator -->
+          <div id="borrowing" class="calculator-section active">
+            <div class="form-section">
+              <h2>About Us</h2>
+              <form>
+                <label for="loan-for">This loan is for</label>
+                <select id="loan-for">
+                  <option>There's two of us</option>
+                  <option>Just me</option>
+                </select>
+
+                <label for="dependants">Number of dependants</label>
+                <div class="dependants">
+                  <input
+                    type="number"
+                    id="childDependants"
+                    placeholder="children (under 18)"
+                  />
+                  <input
+                    type="number"
+                    id="adultDependants"
+                    placeholder="adults (18 and over)"
+                  />
+                </div>
+
+                <label for="purpose">We're looking for</label>
+                <select id="purpose">
+                  <option>A home to live in</option>
+                  <option>Investment property</option>
+                </select>
+              </form>
+            </div>
+
+            <div class="form-section">
+              <h2>My Income</h2>
+              <form>
+                <label for="annualIncomeInput">I earn (before tax)</label>
+                <input type="number" id="annualIncomeInput" placeholder="0" />
+                <select id="annualIncomePeriod">
+                  <option value="1">Per year</option>
+                  <option value="12">Per month</option>
+                  <option value="26">Per fortnight</option>
+                  <option value="52">Per week</option>
+                </select>
+              </form>
+              <div><p class="form-section">(Annual income before tax)</p></div>
+            </div>
+          </div>
+
+          <div id="borrowing" class="calculator-section active">
+            <div class="form-section">
+              <h2>Current rental income</h2>
+              <form>
+                <input
+                  type="number"
+                  id="rentalIncomeInput"
+                  placeholder="0"
+                  aria-label="(Income you receive from an investment property)"
+                />
+                <select id="rentalIncomePeriod">
+                  <option value="1 ">Per year</option>
+                  <option value="12">Per month</option>
+                  <option value="26">Per fortnight</option>
+                  <option value="52">Per week</option>
+                </select>
+              </form>
+              <div>
+                <p class="form-section">
+                  (Income you receive from an investment property)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="borrowing" class="calculator-section active">
+          <div class="form-section">
+            <h2>My other income</h2>
+            <form>
+              <input
+                type="number"
+                id="otherIncomeInput"
+                placeholder="0"
+                aria-label="(E.g. regular bonus, overtime, dividends)
+		
+						"
+              />
+              <select id="otherIncomePeriod">
+                <option value="1 ">Per year</option>
+                <option value="12">Per month</option>
+                <option value="26">Per fortnight</option>
+                <option value="52">Per week</option>
+              </select>
+            </form>
+            <div>
+              <p class="form-section">
+                (E.g. regular bonus, overtime, dividends)
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Expenses Section -->
+        <div id="borrowing" class="calculator-section active">
+          <div class="form-section">
+            <h2>Expenses</h2>
+            <form>
+              <label for="monthlyExpensesInput">Bills & living expenses</label>
+              <input
+                type="number"
+                id="monthlyExpensesInput"
+                placeholder="0"
+                aria-label="Monthly expenses"
+              />
+              <select id="otherIncomePeriod">
+                <option value="1 ">Per year</option>
+                <option value="12">Per month</option>
+                <option value="26">Per fortnight</option>
+                <option value="52">Per week</option>
+              </select>
+            </form>
+            <div>
+              <p class="form-section">
+                (E.g. food, electricity, transport, education, entertainment)
+              </p>
+            </div>
+          </div>
+          <div class="form-section">
+            <label for="rentInput"
+              >We'll be paying rent after we buy a property</label
+            >
+            <form>
+              <input type="number" id="rentInput" placeholder="0" />
+              <select id="rentPeriod">
+                <option value="1 ">Per year</option>
+                <option value="12">Per month</option>
+                <option value="26">Per fortnight</option>
+                <option value="52">Per week</option>
+              </select>
+            </form>
+            <div>
+              <p class="form-section">
+                (If you’ll pay rent once you buy a property)
+              </p>
+            </div>
+          </div>
+          <div class="form-section">
+            <label for="home-loanInput">Current home loan repayments</label>
+            <form>
+              <input type="number" id="home-loanInput" placeholder="0" />
+              <select id="home-loanPeriod">
+                <option value="1 ">Per year</option>
+                <option value="12">Per month</option>
+                <option value="26">Per fortnight</option>
+                <option value="52">Per week</option>
+              </select>
+            </form>
+
+            <div>
+              <p class="form-section">
+                (If either of you already have a home loan)
+              </p>
+            </div>
+          </div>
+          <div class="form-section">
+            <label for="other-loanInput">Other loan repayments</label>
+            <form>
+              <input type="number" id="other-loanInput" placeholder="0" />
+              <select id="other-loanPeriod">
+                <option value="1 ">Per year</option>
+                <option value="12">Per month</option>
+                <option value="26">Per fortnight</option>
+                <option value="52">Per week</option>
+              </select>
+            </form>
+
+            <div>
+              <p class="form-section">
+                (Total repayments e.g. personal, student, car loan)
+              </p>
+            </div>
+          </div>
+          <div class="form-section">
+            <label for="creditCardlimitInput"
+              >Our total credit card limit</label
+            >
+            <form>
+              <input type="number" id="creditCardlimitInput" placeholder="0" />
+            </form>
+            <div>
+              <p class="form-section">
+                (Combined limits including store cards)
+              </p>
+            </div>
+          </div>
+          <div class="calculate-container">
+            <button
+              id="calculate-Button"
+              class="form-section btn-action--emphasis"
+              type="button"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Section -->
+      <div id="borrowing" class="calculator-section active">
+        <div class="calculator-result">
+          <h3>You may be able to borrow up to</h3>
+          <h1 id="borrowAmount">$0</h1>
+          <div class="slider-container">
+            <input
+              type="range"
+              id="borrowSlider"
+              min="100000"
+              max="10000000"
+              value="7487800"
+              step="10000"
+            />
+            <div class="slider-value">$0</div>
+          </div>
+
+          <div class="repayment-details">
+            <p>Principal and interest repayments</p>
+            <p>
+              <select id="repayment-details">
+                <option value="1 ">Per year</option>
+                <option value="12">Per month</option>
+                <option value="26">Per fortnight</option>
+                <option value="52">Per week</option>
+              </select>
+              <span>| Loan over </span>
+              <select id="loanDuration">
+                <option value="30">30 years</option>
+                <option value="20">20 years</option>
+                <option value="15">15 years</option>
+              </select>
+            </p>
+          </div>
+
+          <div class="loan-details" id="loan-details">
+            <p>Based on a</p>
+            <select id="loanRateType">
+              <option>
+                6.44% p.a.
+                Extra&nbsp;Home&nbsp;Loan&nbsp;LVR&nbsp;60%&nbsp;or&nbsp;below
+              </option>
+              <option>
+                6.49% p.a.
+                Extra&nbsp;Home&nbsp;Loan&nbsp;LVR&nbsp;60.01%&nbsp;to&nbsp;70%
+              </option>
+              <option>
+                6.59% p.a.
+                Extra&nbsp;Home&nbsp;Loan&nbsp;LVR&nbsp;70.01%&nbsp;to&nbsp;80%
+              </option>
+              <option>6.89% p.a. Extra Home Loan LVR 80.01% to 90%</option>
+              <option>7.84% p.a. Extra Home Loan LVR 90.01% to 95%</option>
+              <option>
+                6.34% p.a. Standard Variable Rate Home Loan LVR 60% or below
+                with Wealth Package
+              </option>
+              <option>
+                6.39% p.a. Standard Variable Rate Home Loan LVR 60.01% to 70%
+                with Wealth Package
+              </option>
+              <option>
+                6.49% p.a. Standard Variable Rate Home Loan LVR 70.01% to 80%
+                with Wealth Package
+              </option>
+              <option>
+                6.79% p.a. Standard Variable Rate Home Loan LVR 80.01% to 90%
+                with Wealth Package
+              </option>
+              <option>
+                7.74% p.a. Standard Variable Rate Home Loan LVR 90.01% to 95%
+                with Wealth Package
+              </option>
+              <option>
+                6.39% p.a. 1 Year Fixed Rate Home Loan with Wealth Package
+              </option>
+              <option>
+                6.29% p.a. 2 Year Fixed Rate Home Loan with Wealth Package
+              </option>
+              <option>
+                5.89% p.a. 3 Year Fixed Rate Home Loan with Wealth Package
+              </option>
+              <option>
+                6.29% p.a. 4 Year Fixed Rate Home Loan with Wealth Package
+              </option>
+              <option>
+                6.69% p.a. 5 Year Fixed Rate Home Loan with Wealth Package
+              </option>
+            </select>
+            <!--div class="toggle">
+							<div class="toggle-icon"><img src="https://img.icons8.com/?size=64&id=Rgal81YYbTFz&format=png" alt="toggle between interest rate input field and products drop down" class="toggle-image"></div>
+							<span class="custom-rate">
+								<button type="submit" id="showCustomRate" fdprocessedid="hcxlch">
+								<span>Enter your own interest rate</span>
+							</button>
+						</span>
+						</div>
+					</div-->
+          </div>
+        </div>
+      </div>
+
+      <!-- Repayment Calculator -->
+      <div id="repayment" class="calculator-section">
+        <h2 class="heading-agileinfo">Loan Repayment Calculator</h2>
+        <div class="form-sections-container">
+          <div class="form-section">
+            <label for="loanAmount">Loan Amount</label>
+            <input
+              type="tel"
+              id="loanAmount"
+              placeholder="$0"
+              value="0"
+              min="0"
+              max="99999999"
+              maxlength="8"
+            />
+
+            <label for="loanTerm">Term (years)</label>
+            <input type="tel" id="loanTerm" placeholder="0" value="30" />
+
+            <label for="repaymentType">Repayment Type</label>
+            <select id="repaymentType" onchange="calculateRepayment()">
+              <option value="0">Principal and interest</option>
+              <option value="1">Interest only 1 year</option>
+              <option value="2">Interest only 2 years</option>
+              <option value="3">Interest only 3 years</option>
+              <option value="4">Interest only 4 years</option>
+              <option value="5">Interest only 5 years</option>
+            </select>
+
+            <label for="interestRate">Interest Rate (%)</label>
+            <input
+              type="tel"
+              id="interestRate"
+              placeholder="Enter interest rate"
+              value="7.00"
+            />
+            <div class="repayment-container">
+              <button id="repayment-button" onclick="calculateRepayment()">
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="calculator-result">
+          <div class="form-section">
+            <h2>Your monthly repayments</h2>
+            <p id="monthlyRepaymentDescription">
+              Interest only repayments for selected years:
+              <span id="interestOnlyRepayment">$0</span>
+            </p>
+            <p>
+              Repayments after Interest only period:
+              <span id="principalRepayment">$0</span>
+            </p>
+            <p>Total loan repayments: <span id="totalRepayment">$0</span></p>
+            <p>Total interest charged: <span id="totalInterest">$0</span></p>
+          </div>
+        </div>
+      </div>
+      <!-- Stamp Duty Calculator -->
+      <div id="stamp" class="calculator-section">
+        <div class="form-sections-container">
+          <div class="form-section">
+            <h2>Stamp Duty Calculator</h2>
+            <label for="lookingFor">I'm looking for</label>
+            <select id="lookingFor">
+              <option value="vacant land">vacant land to build on</option>
+              <option value="existing home">an existing property</option>
+              <option value="investment">a newly built property</option>
+            </select>
+
+            <label for="state">in</label>
+            <select id="state">
+              <option value="NSW">NSW</option>
+              <option value="VIC">VIC</option>
+              <option value="QLD">QLD</option>
+              <option value="WA">WA</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="ACT">ACT</option>
+              <option value="NT">NT</option>
+
+            </select>
+
+            <label for="purpose">for</label>
+            <select id="purpose">
+              <option value="first home">my first home</option>
+              <option value="second home">a home to live in</option>
+              <option value="investment">an investment property</option>
+            </select>
+
+            <input
+              type="tel"
+              id="savings"
+              placeholder="Enter your savings"
+              min="0"
+            />
+            <input
+              type="tel"
+              id="propertyWorth"
+              placeholder="Enter property worth"
+              min="0"
+            />
+          </div>
+        </div>
+        <div class="calculator-result">
+          <div class="upfront-cost">
+            <h2>
+              Your upfront costs would be <span id="upfront-cost">$0</span>
+            </h2>
+          </div>
+
+          <div class="visual-section">
+            <div class="circle">
+              <div class="circle-text">
+                <span id="savings-amount">$0</span><br />
+                Savings
+              </div>
+            </div>
+            <span class="operator">-</span>
+            <div class="circle">
+              <div class="circle-text">
+                <span id="upfront-cost-circle">$0</span><br />
+                Upfront costs
+              </div>
+            </div>
+            <span class="operator">=</span>
+            <div class="circle">
+              <div class="circle-text">
+                <span id="remaining-deposit">$0</span><br />
+                Savings left for a deposit
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refinance Calculator -->
+      <div id="refinance" class="calculator-section">
+        <h2 class="heading-agileinfo">Refinance Calculator</h2>
+        <div class="form-sections-container">
+          <!-- Current Loan Section -->
+          <div class="form-section">
+            <h2>Your current home loan</h2>
+
+            <div class="form-row">
+              <label for="current-loan-balance">Current loan balance</label>
+              <input
+                type="tel"
+                id="current-loan-balance"
+                placeholder="$0"
+                value="0"
+                min="0"
+                max="99999999"
+                maxlength="8"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="current-loan-term">Term (years)</label>
+              <input
+                type="tel"
+                id="current-loan-term"
+                placeholder="0"
+                value="30"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="years-paid">Years already paid</label>
+              <input type="tel" id="years-paid" placeholder="0" value="0" />
+            </div>
+
+            <div class="form-row">
+              <label for="current-interest-rate">Interest rate (% p.a.)</label>
+              <input
+                type="tel"
+                id="current-interest-rate"
+                placeholder="Enter interest rate"
+                value="0"
+              />
+            </div>
+          </div>
+
+          <!-- New Loan Section -->
+          <div class="form-section">
+            <h2>New loan</h2>
+
+            <div class="form-row">
+              <label for="new-loan-term">Term (years)</label>
+              <input type="tel" id="new-loan-term" placeholder="0" value="30" />
+            </div>
+
+            <div class="form-row">
+              <label for="new-interest-rate">Interest rate (% p.a.)</label>
+              <input
+                type="tel"
+                id="new-interest-rate"
+                placeholder="Enter interest rate"
+                value="0"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Results Section -->
+        <div class="calculator-result">
+          <div class="form-section">
+            <h2>Your monthly repayments</h2>
+            <p>
+              Monthly repayments for current loan:
+              <span id="current-monthly-repayment">$0</span>
+            </p>
+            <p>
+              Our estimation for refinance loan:
+              <span id="new-monthly-repayment">$0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function showCalculator(event, calculator) {
+          // Hide all calculator sections
+          const sections = document.querySelectorAll(".calculator-section");
+          sections.forEach((section) => section.classList.remove("active"));
+
+          // Remove 'active' class from all buttons
+          const buttons = document.querySelectorAll(".tab-button");
+          buttons.forEach((button) => button.classList.remove("active"));
+
+          // Show the selected calculator section
+          document.getElementById(calculator).classList.add("active");
+
+          // Highlight the clicked button
+          event.target.classList.add("active");
+        }
+        document
+          .getElementById("calculate-Button")
+          .addEventListener("click", calculateBorrowingPower);
+        document
+          .getElementById("repayment-details")
+          .addEventListener("change", calculateBorrowingPower);
+
+        function calculateBorrowingPower() {
+          // Get income details
+          const annualIncome = parseFloat(
+            document.getElementById("annualIncomeInput").value || 0
+          );
+          const incomeFrequency = parseInt(
+            document.getElementById("annualIncomePeriod").value || 1
+          );
+          const rentalIncome = parseFloat(
+            document.getElementById("rentalIncomeInput").value || 0
+          );
+          const rentalFrequency = parseInt(
+            document.getElementById("rentalIncomePeriod").value || 1
+          );
+          const otherIncome = parseFloat(
+            document.getElementById("otherIncomeInput").value || 0
+          );
+          const otherIncomeFrequency = parseInt(
+            document.getElementById("otherIncomePeriod").value || 1
+          );
+
+          // Get expenses details
+          const monthlyExpenses = parseFloat(
+            document.getElementById("monthlyExpensesInput").value || 0
+          );
+          const rentAfterBuy = parseFloat(
+            document.getElementById("rentInput").value || 0
+          );
+          const homeLoanRepayment = parseFloat(
+            document.getElementById("home-loanInput").value || 0
+          );
+          const otherLoanRepayment = parseFloat(
+            document.getElementById("other-loanInput").value || 0
+          );
+          const creditCardLimit = parseFloat(
+            document.getElementById("creditCardlimitInput").value || 0
+          );
+
+          // Convert all income and expenses to an annual amount for consistency
+          const annualIncomeTotal =
+            annualIncome * incomeFrequency +
+            rentalIncome * rentalFrequency +
+            otherIncome * otherIncomeFrequency;
+          const annualExpensesTotal =
+            monthlyExpenses * 12 +
+            rentAfterBuy * 12 +
+            homeLoanRepayment * 12 +
+            otherLoanRepayment * 12;
+
+          // Basic formula for borrowing power (as an example; in practice, you might apply more complex rules or rates)
+          const borrowingPower = (annualIncomeTotal - annualExpensesTotal) * 5; // multiplier for borrowing power
+
+          // Update borrow amount on UI
+          document.getElementById(
+            "borrowAmount"
+          ).innerText = `$${borrowingPower.toLocaleString()}`;
+          document.getElementById("borrowSlider").value = borrowingPower;
+          document.querySelector(
+            ".slider-value"
+          ).innerText = `$${borrowingPower.toLocaleString()}`;
+
+          // Update repayment details - assuming a standard calculation for principal + interest over a loan term
+          const loanTermYears = parseInt(
+            document.getElementById("loanDuration").value
+          );
+          const interestRate = parseFloat(
+            document.getElementById("loanRateType").value.match(/[\d.]+/)[0]
+          ); // Extract number from the rate text
+          const repaymentFrequency = parseInt(
+            document.getElementById("repayment-details").value
+          );
+
+          const monthlyRate = interestRate / 100 / 12;
+          const numberOfPayments = loanTermYears * 12;
+          const monthlyRepayment =
+            (borrowingPower * monthlyRate) /
+            (1 - Math.pow(1 + monthlyRate, -numberOfPayments));
+
+          // Update repayment and loan details
+          document.querySelector(
+            ".repayment-details p"
+          ).innerText = `$${monthlyRepayment.toFixed(2)}`;
+          document
+            .getElementById("loan-details")
+            .querySelector(
+              "p"
+            ).innerText = `Based on a ${interestRate}% p.a. rate over ${loanTermYears} years`;
+        }
+
+        function calculateRepayment() {
+          // Get input values
+          const loanAmount = parseFloat(
+            document.getElementById("loanAmount").value
+          );
+          const loanTerm = parseInt(document.getElementById("loanTerm").value);
+          const repaymentType = parseInt(
+            document.getElementById("repaymentType").value
+          );
+          const interestRate =
+            parseFloat(document.getElementById("interestRate").value) / 100;
+
+          if (isNaN(loanAmount) || isNaN(loanTerm) || isNaN(interestRate)) {
+            alert(
+              "Please enter valid values for loan amount, loan term, and interest rate."
+            );
+            return;
+          }
+
+          // Calculate monthly interest rate
+          const monthlyInterestRate = interestRate / 12;
+
+          // Calculate interest-only monthly repayment for the selected interest-only period
+          const interestOnlyRepayment = loanAmount * monthlyInterestRate;
+
+          // Determine interest-only period (in years) based on the selected option
+          const interestOnlyYears = repaymentType;
+          const interestOnlyMonths = interestOnlyYears * 12;
+
+          // Calculate the remaining term after the interest-only period
+          const remainingTermYears = loanTerm - interestOnlyYears;
+          const remainingTermMonths = remainingTermYears * 12;
+
+          // Calculate principal and interest repayment (after interest-only period)
+          let principalRepayment = 0;
+          if (remainingTermMonths > 0) {
+            principalRepayment =
+              (loanAmount *
+                (monthlyInterestRate *
+                  Math.pow(1 + monthlyInterestRate, remainingTermMonths))) /
+              (Math.pow(1 + monthlyInterestRate, remainingTermMonths) - 1);
+          }
+
+          // Calculate total repayments and total interest
+          const totalInterestOnlyRepayment =
+            interestOnlyRepayment * interestOnlyMonths;
+          const totalPrincipalRepayment =
+            principalRepayment * remainingTermMonths;
+          const totalRepayment =
+            totalInterestOnlyRepayment + totalPrincipalRepayment;
+          const totalInterest = totalRepayment - loanAmount;
+
+          // Update HTML with calculated values
+          document.getElementById(
+            "interestOnlyRepayment"
+          ).innerText = `$${interestOnlyRepayment.toFixed(2)}`;
+          document.getElementById(
+            "principalRepayment"
+          ).innerText = `$${principalRepayment.toFixed(2)}`;
+          document.getElementById(
+            "totalRepayment"
+          ).innerText = `$${totalRepayment.toFixed(2)}`;
+          document.getElementById(
+            "totalInterest"
+          ).innerText = `$${totalInterest.toFixed(2)}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          // Input fields for current loan
+          const currentLoanBalance = document.getElementById(
+            "current-loan-balance"
+          );
+          const currentLoanTerm = document.getElementById("current-loan-term");
+          const yearsPaid = document.getElementById("years-paid");
+          const currentInterestRate = document.getElementById(
+            "current-interest-rate"
+          );
+
+          // Input fields for new loan
+          const newLoanTerm = document.getElementById("new-loan-term");
+          const newInterestRate = document.getElementById("new-interest-rate");
+
+          // Display elements for results
+          const currentMonthlyRepayment = document.getElementById(
+            "current-monthly-repayment"
+          );
+          const newMonthlyRepayment = document.getElementById(
+            "new-monthly-repayment"
+          );
+
+          // Function to calculate monthly repayments
+          function calculateMonthlyRepayment(balance, rate, termYears) {
+            const monthlyInterestRate = rate / 100 / 12;
+            const numberOfPayments = termYears * 12;
+            return (
+              balance *
+              (monthlyInterestRate /
+                (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments)))
+            );
+          }
+
+          // Function to update the calculations
+          function updateCalculations() {
+            // Current loan calculations
+            const balance = parseFloat(currentLoanBalance.value) || 0;
+            const totalTerm = parseInt(currentLoanTerm.value) || 0;
+            const yearsPaidValue = parseInt(yearsPaid.value) || 0;
+            const remainingTerm = totalTerm - yearsPaidValue;
+            const rate = parseFloat(currentInterestRate.value) || 0;
+
+            if (remainingTerm > 0) {
+              const currentRepayment = calculateMonthlyRepayment(
+                balance,
+                rate,
+                remainingTerm
+              );
+              currentMonthlyRepayment.textContent = `$${currentRepayment.toFixed(
+                2
+              )}`;
+            } else {
+              currentMonthlyRepayment.textContent = "$0.00";
+            }
+
+            // New loan calculations
+            const newRate = parseFloat(newInterestRate.value) || 0;
+            const newTerm = parseInt(newLoanTerm.value) || 0;
+
+            if (newTerm > 0) {
+              const newRepayment = calculateMonthlyRepayment(
+                balance,
+                newRate,
+                newTerm
+              );
+              newMonthlyRepayment.textContent = `$${newRepayment.toFixed(2)}`;
+            } else {
+              newMonthlyRepayment.textContent = "$0.00";
+            }
+          }
+
+          // Event listeners to trigger calculation when inputs change
+          currentLoanBalance.addEventListener("input", updateCalculations);
+          currentLoanTerm.addEventListener("input", updateCalculations);
+          yearsPaid.addEventListener("input", updateCalculations);
+          currentInterestRate.addEventListener("input", updateCalculations);
+          newLoanTerm.addEventListener("input", updateCalculations);
+          newInterestRate.addEventListener("input", updateCalculations);
+
+          // Initial calculation on page load
+          updateCalculations();
+        });
+        // Function to update the calculated values
+function updateCosts() {
+    // Get the values from the input fields
+    const lookingFor = document.getElementById("lookingFor").value;
+    const state = document.getElementById("state").value;
+    const purpose = document.getElementById("purpose").value;
+    const savings = parseFloat(document.getElementById("savings").value) || 0;
+    const propertyWorth = parseFloat(document.getElementById("propertyWorth").value) || 0;
+
+    // Calculate the stamp duty based on state and property type
+    let stampDuty = calculateStampDuty(propertyWorth, state, lookingFor, purpose);
+
+    // Calculate total upfront costs
+    const upfrontCost = stampDuty;
+
+    // Calculate remaining deposit
+    const remainingDeposit = savings - upfrontCost;
+
+    // Update the DOM elements with calculated values
+    document.getElementById("upfront-cost").textContent = `$${upfrontCost.toFixed(2)}`;
+    document.getElementById("savings-amount").textContent = `$${savings.toFixed(2)}`;
+    document.getElementById("upfront-cost-circle").textContent = `$${upfrontCost.toFixed(2)}`;
+    document.getElementById("remaining-deposit").textContent = `$${remainingDeposit.toFixed(2)}`;
+}
+
+// Function to calculate stamp duty based on conditions (this is a placeholder calculation)
+function calculateStampDuty(propertyWorth, state, lookingFor, purpose) {
+    let rate;
+    switch (state) {
+        case "NSW":
+            rate = 0.05;
+            break;
+        case "VIC":
+            rate = 0.06;
+            break;
+        case "QLD":
+            rate = 0.04;
+            break;
+        case "WA":
+            rate = 0.045;
+            break;
+        case "SA":
+            rate = 0.047;
+            break;
+        case "TAS":
+            rate = 0.03;
+            break;
+        case "ACT":
+            rate = 0.049;
+            break;
+        case "NT":
+            rate = 0.055;
+            break;
+        default:
+            rate = 0.05; // Default rate if none is provided
+    }
+
+    // Additional conditions can be applied here
+    if (purpose === "first home" && lookingFor === "existing home") {
+        rate -= 0.01; // hypothetical discount for first-time buyers of an existing home
+    }
+
+    return propertyWorth * rate;
+}
+
+// Add event listeners to input fields for real-time updates
+document.getElementById("lookingFor").addEventListener("change", updateCosts);
+document.getElementById("state").addEventListener("change", updateCosts);
+document.getElementById("purpose").addEventListener("change", updateCosts);
+document.getElementById("savings").addEventListener("input", updateCosts);
+document.getElementById("propertyWorth").addEventListener("input", updateCosts);
+
+      </script>
+
+      <div class="widget">
+        <div class="content">
+          <p>Wondering how the loan process works and having any queries.</p>
+
+          <p>
+            <a
+              class="question-button"
+              href="question.html"
+              title="Write Mortgage Review"
+              target="_blank"
+              >Ask Me a Question</a
+            >
+          </p>
+        </div>
+      </div>
+
+    <!--footer-->
+    <footer>
+		<div class="container py-md-4 mt-md-3">
+			<div class="row footer-top-w3layouts-agile py-5">
+				<div class="col-lg-3 col-md-6 col-sm-6 footer-grid">
+					<div class="footer-title">
+						<h3>About Us</h3>
+					</div>
+					<div class="footer-text">
+						<p>“We are dedicated to growing our business by providing superior mortgage products and services, expanding our reach into new markets, and building long-term relationships with our clients and partners.”</p>
+
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 footer-grid">
+					<div class="footer-title">
+						<h3>Contact Us</h3>
+					</div>
+					<div class="footer-office-hour">
+						<ul>
+							<li class="hd">Address :</li>
+							<li>No.27 - 5549436 street lorem, Newyork City, USA</li>
+
+						</ul>
+						<ul>
+							<li class="hd">Phone:+ 1 (234) 567 8901</li>
+							<li class="hd">Email:
+								<a href="mailto:info@example.com">info@example.com</a>
+							</li>
+							<li class="hd">Fax: 1(234) 567 8901</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 footer-grid">
+					<div class="footer-title">
+						<h3>Recent Posts</h3>
+					</div>
+					<div class="footer-list">
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g1.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g2.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g3.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g4.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g5.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g6.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g7.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g9.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#" data-toggle="modal" data-target="#myModal">
+								<img src="../images/g8.jpg" class="img-fluid" alt=" ">
+							</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 footer-grid">
+					<div class="footer-title">
+						<h3>Subscribe</h3>
+					</div>
+					<form action="https://formspree.io/f/xkgnbanv"
+					method="POST" class="newsletter">
+						<input class="email" type="email" name="email" placeholder="Your email..." required="">
+						<button class="btn1">
+							<i class="far fa-envelope"></i>
+						</button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+    <!---->
+    <div class="copyright py-3">
+      <div class="container">
+        <div class="copyrighttop">
+          <ul>
+            <li>
+              <h4>Follow us on:</h4>
+            </li>
+            <li>
+              <a class="facebook" href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a class="facebook" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="facebook" href="#">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li>
+              <a class="facebook" href="#">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Home Loan</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		 <div class="agileits-w3layouts-info">
+			<img src="../images/g6.jpg" class="img-fluid" alt="" />
+			<!-- <p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. </p> -->
+		</div>
+	</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- //Modal -->
+    <!-- js-->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- js-->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js "></script>
+    <!-- //Bootstrap Core JavaScript -->
+  </body>
+</html>
+<html lang="en">
+<head>
+	<title>Chat Button Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<!-- Font Awesome for chat icon -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+	<style>
+		/* Chat Icon Button Style */
+		.chat-button {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 50px;
+			height: 50px;
+      background: linear-gradient(to right, #1a3b67, #2c5c8c, #5b8bbb);
+			color: rgb(15, 15, 15);
+			font-size: 24px;
+			border-radius: 15px; /* Square button with slightly rounded corners */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
+			z-index: 1000; /* Ensure visibility on top of other elements */
+			cursor: pointer;
+		}
+		
+		/* Hover Effect */
+		.chat-button:hover {
+			background-color: #0056b3; /* Darker blue on hover */
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Sample page content -->
+	<!--<h1>Welcome to the Chat Button Example Page</h1>
+	<p>This is a sample page to showcase a fixed chat button icon.</p-->
+
+	<!-- Chat Icon Button -->
+	<div class="chat-button" title="Chat with us" onclick="redirectToChat()">
+    <img src="https://cdn-icons-png.flaticon.com/128/8943/8943394.png" alt="Chat Icon" style="width: 35px; height: 38px;"/> <!-- Chat Icon -->
+	</div>
+
+	<!-- JavaScript for redirection -->
+	<script>
+		function redirectToChat() {
+			window.location.href = "chatbot.html";
+		}
+	</script>
+
+	<!-- JavaScript for Bootstrap (optional) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
