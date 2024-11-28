@@ -232,7 +232,7 @@ header h1 a span {
 /* banner */
 
 .bg1 {
-  background: url('/mortgage-square-project/images/bg2.jpg') no-repeat;
+  background: url('../images/bg2.jpg') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
