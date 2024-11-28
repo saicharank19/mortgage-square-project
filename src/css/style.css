@@ -242,7 +242,7 @@ header h1 a span {
 }
 
 .bg2 {
-  background: url('/mortgage-square-project/images/bg3.jpg') no-repeat;
+  background: url('../images/bg3.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
