@@ -1,178 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta
+      name="description"
+      content="Have questions about mortgages? Visit Mortgage Square's FAQ page for answers to common home loan questions, mortgage processes, refinancing, and more. Get expert advice to make informed decisions."
+    />
+    <meta
+      name="keywords"
+      content="mortgage questions, home loan FAQ, mortgage process, refinancing questions, property investment FAQs, mortgage square questions, home loan inquiries"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/mortgage-square-fav-icon.jpg"
+      style="border-radius: 20%"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="64x64"
+      href="./images/mortgage-square-fav-icon.jpg"
+      style="border-radius: 20%"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="128x128"
+      href="./images/mortgage-square-fav-icon.jpg"
+      style="border-radius: 20%"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Query</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container.warning{
-            gap:5px;
-        }
-        .container.warning
-        {
-            text-align: center;
-        }
-        .form-container {
-            max-width: 600px;
-            margin: auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .form-group textarea {
-            resize: vertical;
-        }
-        .rating-container {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .star {
-            font-size: 30px;
-            cursor: pointer;
-            color: #ccc;
-        }
-        .star.selected,
-        .star:hover,
-        .star:hover ~ .star {
-            color: #007bff;
-        }
-        .rating-text {
-            text-align: center;
-            margin-top: 5px;
-            font-size: 14px;
-            gap: 25px;
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      .container.warning {
+        gap: 5px;
+      }
+      .container.warning {
+        text-align: center;
+      }
+      .form-container {
+        max-width: 600px;
+        margin: auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-group textarea {
+        resize: vertical;
+      }
+      .rating-container {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .star {
+        font-size: 30px;
+        cursor: pointer;
+        color: #ccc;
+      }
+      .star.selected,
+      .star:hover,
+      .star:hover ~ .star {
+        color: #007bff;
+      }
+      .rating-text {
+        text-align: center;
+        margin-top: 5px;
+        font-size: 14px;
+        gap: 25px;
 
-            color: #555;
-        }
-        button[type="submit"] {
-            background: linear-gradient(to right, #1a3b67, #2c5c8c, #5b8bbb);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        button[type="submit"] {
-    display: block;
-    margin: 20px auto 0; /* Center the button */
-}
+        color: #555;
+      }
+      button[type="submit"] {
+        background: linear-gradient(to right, #1a3b67, #2c5c8c, #5b8bbb);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      button[type="submit"] {
+        display: block;
+        margin: 20px auto 0; /* Center the button */
+      }
 
-        button[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        .notice-text {
-    text-align: center;
-    margin-top: 25px; /* Adjusts the space between the form and the text */
-    font-size: 12px;
-    color: #555;
-}
- .container.warning{
-    text-align: center;
-    margin-top: 25px; /* Adjusts the space between the form and the text */
-    font-size: 12px;
-    color: #555;
- }
-
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      .notice-text {
+        text-align: center;
+        margin-top: 25px; /* Adjusts the space between the form and the text */
+        font-size: 12px;
+        color: #555;
+      }
+      .container.warning {
+        text-align: center;
+        margin-top: 25px; /* Adjusts the space between the form and the text */
+        font-size: 12px;
+        color: #555;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="form-container">
-        <h2>Enter your details and ask me a question:</h2>
-        <form action="https://formspree.io/f/xovqwzad"
-        method="POST">
-            <div class="form-group">
-                <label for="question">Question? <span style="color: red;">*</span></label>
-                <input type="text" name="question" required>
-            </div>
-            <div class="form-group">
-                <label for="first-name">First Name <span style="color: red;">*</span></label>
-                <input type="text" name="first-name" required>
-            </div>
-            <div class="form-group">
-                <label for="last-name">Last Name <span style="color: red;">*</span></label>
-                <input type="text" name="last-name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email <span style="color: red;">*</span></label>
-                <input type="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="contact">Contact</label>
-                <input type="tel" name="contact">
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+      <h2>Enter your details and ask me a question:</h2>
+      <form action="https://formspree.io/f/xovqwzad" method="POST">
+        <div class="form-group">
+          <label for="question"
+            >Question? <span style="color: red">*</span></label
+          >
+          <input type="text" name="question" required />
+        </div>
+        <div class="form-group">
+          <label for="first-name"
+            >First Name <span style="color: red">*</span></label
+          >
+          <input type="text" name="first-name" required />
+        </div>
+        <div class="form-group">
+          <label for="last-name"
+            >Last Name <span style="color: red">*</span></label
+          >
+          <input type="text" name="last-name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span style="color: red">*</span></label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact</label>
+          <input type="tel" name="contact" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "FkI_xdtGqReNpf3t6",
-      });
-   })();
-</script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "FkI_xdtGqReNpf3t6",
+        });
+      })();
+    </script>
     <script>
-        function sendEmail(event) {
-            event.preventDefault(); // Prevent form from submitting traditionally
+      function sendEmail(event) {
+        event.preventDefault(); // Prevent form from submitting traditionally
 
-            // Collect form data
-            const templateParams = {
-                question: document.getElementById("question").value,
-                firstName: document.getElementById("first-name").value,
-                lastName: document.getElementById("last-name").value,
-                email: document.getElementById("email").value,
-                contact: document.getElementById("contact").value
-            };
+        // Collect form data
+        const templateParams = {
+          question: document.getElementById("question").value,
+          firstName: document.getElementById("first-name").value,
+          lastName: document.getElementById("last-name").value,
+          email: document.getElementById("email").value,
+          contact: document.getElementById("contact").value,
+        };
 
-            // Send email using EmailJS
-            emailjs.send("service_iymiycs", "template_gjlc02e", templateParams)
-                .then(
-                    function(response) {
-                        console.log("SUCCESS!", response.status, response.text);
-                        alert("Your question has been sent successfully!");
-                    },
-                    function(error) {
-                        console.error("FAILED...", error);
-                        alert("Failed to send your question. Please try again later.");
-                    }
-                );
-        }
+        // Send email using EmailJS
+        emailjs
+          .send("service_iymiycs", "template_gjlc02e", templateParams)
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Your question has been sent successfully!");
+            },
+            function (error) {
+              console.error("FAILED...", error);
+              alert("Failed to send your question. Please try again later.");
+            }
+          );
+      }
 
-        // Attach the sendEmail function to the form's submit event
-        document.getElementById("questionForm").addEventListener("submit", sendEmail);
+      // Attach the sendEmail function to the form's submit event
+      document
+        .getElementById("questionForm")
+        .addEventListener("submit", sendEmail);
     </script>
 
-<div class="notice-text"><p>Please note that your first name, last initial, and response will be publicly posted on my Mortgage Square.com profile and may be syndicated to other social media platforms.</p><p>© Copyright 2024 Experience.com 2010 Crow Canyon Place, Suite 100, San Ramon, CA 94583.<p> All Rights Reserved.<!-- -->  </div>
-
-</body>
+    <div class="notice-text">
+      <p>
+        Please note that your first name, last initial, and response will be
+        publicly posted on my Mortgage Square.com profile and may be syndicated
+        to other social media platforms.
+      </p>
+      <p>
+        © Copyright 2024 Experience.com 2010 Crow Canyon Place, Suite 100, San
+        Ramon, CA 94583.
+      </p>
+      <p>All Rights Reserved.<!-- --></p>
+    </div>
+  </body>
 </html>
