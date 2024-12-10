@@ -621,39 +621,32 @@
       function validateUserDetailForm() {
         event.preventDefault();
 
-        // Get input values
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const contact = document.getElementById("contact").value;
+        const fields = [
+          {
+            id: "name",
+            errorId: "name-error",
+            message: "Please enter your name.",
+          },
+          {
+            id: "email",
+            errorId: "email-error",
+            message: "Please enter your email.",
+          },
+          {
+            id: "contact",
+            errorId: "contact-error",
+            message: "Please enter your number.",
+          },
+        ];
 
-        // Get error message elements
-        const nameErrorEl = document.getElementById("name-error");
-        const emailErrorEl = document.getElementById("email-error");
-        const contactErrorEl = document.getElementById("contact-error");
-
-        // Initialize error flag
         let hasError = false;
 
-        // Clear previous error messages
-        nameErrorEl.textContent = "";
-        emailErrorEl.textContent = "";
-        contactErrorEl.textContent = "";
-
-        // Validate fields
-        if (!name) {
-          nameErrorEl.textContent = "Please enter your name.";
-          hasError = true;
-        }
-
-        if (!email) {
-          emailErrorEl.textContent = "Please enter your email.";
-          hasError = true;
-        }
-
-        if (!contact) {
-          contactErrorEl.textContent = "Please enter your number.";
-          hasError = true;
-        }
+        fields.forEach(({ id, errorId, message }) => {
+          const value = document.getElementById(id).value;
+          const errorElement = document.getElementById(errorId);
+          errorElement.textContent = value ? "" : message;
+          if (!value) hasError = true;
+        });
 
         // Proceed if no errors
         if (!hasError) {
@@ -662,57 +655,37 @@
       }
 
       function validateIncomeAndHouseHoldPage() {
-        // Get all input values
         const userIncome = document.getElementById("houseHoldIncome").value;
         const divs = document.querySelectorAll(".selectable");
-
-        // Check if at least one div already has the "selected" class
         const hasSelectedClass = Array.from(divs).some((div) =>
           div.classList.contains("selected")
         );
-        const iconsDivsError = document.getElementById("household-error");
 
-        // Get error message divs
         const userIncomeError = document.getElementById(
           "household-income-error"
         );
+        const iconsDivsError = document.getElementById("household-error");
         let hasError = false;
 
-        iconsDivsError.textContent = "";
-        userIncomeError.textContent = "";
+        userIncomeError.textContent = userIncome
+          ? ""
+          : "Please enter your household income.";
+        iconsDivsError.textContent = hasSelectedClass
+          ? ""
+          : "Please select the size of your household.";
 
-        if (!userIncome) {
-          userIncomeError.textContent = "Please enter your household income.";
-          hasError = true;
-        }
-        if (!hasSelectedClass) {
-          iconsDivsError.textContent =
-            "Please select the size of your household.";
-          hasSelectedClass = true;
-        }
-        // If there is no error, proceed to the next step
-        if (!(hasError && hasSelectedClass)) {
-          goToYouTab(); //Proceed to the next step
-        }
+        if (!userIncome || !hasSelectedClass) hasError = true;
+
+        if (!hasError) goToYouTab();
       }
 
       function validatePropertyTabPage() {
-        // Get all input values
         const userIncome = document.getElementById("income").value;
-        // Get error message divs
         const userIncomeError = document.getElementById("income-error");
-        // Set initial error flag
-        let hasError = false;
-        // Reset error messages
-        userIncomeError.textContent = "";
-        if (!userIncome) {
-          userIncomeError.textContent = "Please enter your property amount.";
-          hasError = true;
-        }
-        // If there is no error, proceed to the next step
-        if (!hasError) {
-          goToIncomeAndHouseHoldPage(); //Proceed to the next step
-        }
+        userIncomeError.textContent = userIncome
+          ? ""
+          : "Please enter your property amount.";
+        if (userIncome) goToIncomeAndHouseHoldPage(); //Proceed to the next step
       }
 
       function goToIncomeAndHouseHoldPage() {

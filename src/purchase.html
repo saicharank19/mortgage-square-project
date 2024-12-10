@@ -522,124 +522,86 @@
     ></script>
 
     <script>
-      function sendEmail(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Collect form data
-        const templateParams = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          contact: document.getElementById("contact").value,
-        };
-
-        // Send email using EmailJS
+      const sendEmail = (event) =>
+        event.preventDefault() ||
         emailjs
-          .send("service_vgl39ca", "template_prx7cad", templateParams)
+          .send(
+            "service_vgl39ca",
+            "template_prx7cad",
+            Object.fromEntries(
+              ["name", "email", "contact"].map((key) => [
+                key,
+                document.getElementById(key).value,
+              ])
+            )
+          )
           .then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-              alert("Email sent successfully!");
-            },
-            function (error) {
-              console.error("FAILED...", error);
-              alert("Failed to send email. Please try again later.");
-            }
+            ({ status, text }) =>
+              console.log("SUCCESS!", status, text) ||
+              alert("Email sent successfully!"),
+            ({ error }) =>
+              console.error("FAILED...", error) ||
+              alert("Failed to send email. Please try again later.")
           );
-      }
+
       function validateHouseHoldDetails() {
-        try {
-          event.preventDefault();
+        const userIncome = document.getElementById("income")?.value;
+        const hasSelectedClass =
+          document.querySelector(".selectable.selected") !== null;
 
-          // Get all input values
-          const userIncome = document.getElementById("income")?.value;
+        const userIncomeError = document.getElementById("income-error");
+        const iconsDivsError = document.getElementById("household-error");
 
-          const divs = document.querySelectorAll(".selectable");
+        let hasError = false;
 
-          // Check if at least one div already has the "selected" class
-          const hasSelectedClass = Array.from(divs).some((div) =>
-            div?.classList.contains("selected")
-          );
+        if (!userIncome) {
+          userIncomeError.textContent = "Please enter your household income.";
+          hasError = true;
+        }
+        if (!hasSelectedClass) {
+          iconsDivsError.textContent =
+            "Please select the size of your household.";
+          hasError = true;
+        }
 
-          // Get error message divs
-          const userIncomeError = document.getElementById("income-error");
-          const iconsDivsError = document.getElementById("household-error");
-
-          // Set initial error flag
-          let hasError = false;
-
-          // Reset error messages
-          userIncomeError.textContent = "";
-          iconsDivsError.textContent = "";
-
-          // Validate each field and display specific error message if needed
-          if (!userIncome) {
-            userIncomeError.textContent = "Please enter your household income.";
-            hasError = true;
-          }
-          if (!hasSelectedClass) {
-            iconsDivsError.textContent =
-              "Please select the size of your household.";
-            hasSelectedClass = true;
-          }
-
-          // If there is no error, proceed to the next step
-          if (!(hasError && hasSelectedClass)) {
-            goToYouPage(); //Proceed to the next step
-          }
-        } catch (error) {
-          console.error(error);
+        if (!hasError) {
+          goToYouPage(); //Proceed to the next step
         }
       }
 
       function validateUserDetailForm() {
-        try {
-          event.preventDefault();
+        event.preventDefault();
+        const fields = [
+          {
+            id: "name",
+            errorId: "name-error",
+            message: "Please enter your name.",
+          },
+          {
+            id: "email",
+            errorId: "email-error",
+            message: "Please enter your email.",
+          },
+          {
+            id: "contact",
+            errorId: "contact-error",
+            message: "Please enter your number.",
+          },
+        ];
 
-          // Get all input values and icons
-          const userName = document.getElementById("name")?.value;
-          const userEmail = document.getElementById("email")?.value;
-          const userContact = document.getElementById("contact")?.value;
+        let hasError = false;
 
-          // Get error message divs
-          const userNameError = document.getElementById("name-error");
-          const userEmailError = document.getElementById("email-error");
-          const userContactError = document.getElementById("contact-error");
+        fields.forEach(({ id, errorId, message }) => {
+          const value = document.getElementById(id).value;
+          const errorElement = document.getElementById(errorId);
+          errorElement.textContent = value ? "" : message;
+          if (!value) hasError = true;
+        });
 
-          // Set initial error flag
-          let hasError = false;
-
-          // Reset error messages
-          userNameError.textContent = "";
-          userEmailError.textContent = "";
-          userContactError.textContent = "";
-
-          // Validate each field and display specific error message if needed
-          if (!userName) {
-            userNameError.textContent = "Please enter your name.";
-            hasError = true;
-          }
-
-          if (!userEmail) {
-            userEmailError.textContent = "Please enter your email.";
-            hasError = true;
-          }
-
-          if (!userContact) {
-            userContactError.textContent = "Please enter your number.";
-            hasError = true;
-          }
-
-          // If there is no error, proceed to the next step
-          if (!hasError) {
-            sendEmail(event);
-          } else {
-            alert("Please fill in all the required fields.");
-          }
-        } catch (error) {
-          console.error(error);
+        if (!hasError) {
+          sendEmail(event);
         }
       }
-
       function goToYouPage() {
         document.getElementById("incomeAndHouseHold").style.display = "none";
         document.getElementById("youTab").style.display = "block";
@@ -656,21 +618,6 @@
           div.classList.remove("selected");
         });
         element.classList.add("selected");
-      }
-
-      function showTab(tabId) {
-        const tabs = document.querySelectorAll(".tab-content");
-        const buttons = document.querySelectorAll(".inner-tab-button");
-        tabs.forEach((tab) => {
-          tab.classList.remove("active");
-        });
-        buttons.forEach((button) => {
-          button.classList.remove("active");
-        });
-        document.getElementById(tabId).classList.add("active");
-        document
-          .querySelector(`[onclick="showTab('${tabId}')"]`)
-          .classList.add("active");
       }
     </script>
     <!-- //Modal -->

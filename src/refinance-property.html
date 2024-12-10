@@ -523,117 +523,93 @@
     <script>
       //write a onclick function to change placeholder of approximate loan amount
 
-      function sendEmail(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Collect form data
-        const templateParams = {
-          name: document.getElementById("user-name").value,
-          email: document.getElementById("user-email").value,
-          contact: document.getElementById("user-contact").value,
-        };
-
-        // Send email using EmailJS
+      const sendEmail = (event) =>
+        event.preventDefault() ||
         emailjs
-          .send("service_vgl39ca", "template_a4bve6l", templateParams)
+          .send("service_vgl39ca", "template_a4bve6l", {
+            name: document.getElementById("user-name").value,
+            email: document.getElementById("user-email").value,
+            contact: document.getElementById("user-contact").value,
+          })
           .then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-              alert("Email sent successfully!");
-            },
-            function (error) {
-              console.error("FAILED...", error);
-              alert("Failed to send email. Please try again later.");
-            }
+            ({ status, text }) =>
+              console.log("SUCCESS!", status, text) ||
+              alert("Email sent successfully!"),
+            ({ error }) =>
+              console.error("FAILED...", error) ||
+              alert("Failed to send email. Please try again later.")
           );
-      }
 
       function propertyLoanvalidateForm() {
         event.preventDefault();
-        // Get all input values
-        const propertyAddress =
-          document.getElementById("property-address").value;
-        const currentBank = document.getElementById("current-bank").value;
-        const loanBalance = document.getElementById("loan-balance").value;
-        const interestRate = document.getElementById("interest-rate").value;
 
-        // Get error message divs
-        const propertyError = document.getElementById("property-error");
-        const bankError = document.getElementById("bank-error");
-        const loanError = document.getElementById("loan-error");
-        const rateError = document.getElementById("rate-error");
+        const fields = [
+          {
+            id: "property-address",
+            errorId: "property-error",
+            message: "Please enter the property address.",
+          },
+          {
+            id: "current-bank",
+            errorId: "bank-error",
+            message: "Please enter the current bank name.",
+          },
+          {
+            id: "loan-balance",
+            errorId: "loan-error",
+            message: "Please enter the approximate loan balance.",
+          },
+          {
+            id: "interest-rate",
+            errorId: "rate-error",
+            message: "Please enter the current interest rate.",
+          },
+        ];
 
-        // Set initial error flag
         let hasError = false;
 
-        // Reset error messages
-        propertyError.textContent = "";
-        bankError.textContent = "";
-        loanError.textContent = "";
-        rateError.textContent = "";
+        fields.forEach((field) => {
+          const value = document.getElementById(field.id).value;
+          const errorElement = document.getElementById(field.errorId);
+          errorElement.textContent = value ? "" : field.message;
+          if (!value) hasError = true;
+        });
 
-        // Validate each field and display specific error message if needed
-        if (!propertyAddress) {
-          propertyError.textContent = "Please enter the property address.";
-          hasError = true;
-        }
-
-        if (!currentBank) {
-          bankError.textContent = "Please enter the current bank name.";
-          hasError = true;
-        }
-
-        if (!loanBalance) {
-          loanError.textContent = "Please enter the approximate loan balance.";
-          hasError = true;
-        }
-
-        if (!interestRate) {
-          rateError.textContent = "Please enter the current interest rate.";
-          hasError = true;
-        }
-
-        // If there is no error, proceed to the next step
         if (!hasError) {
-          goToDetailsPage(); // Proceed to the next step
+          goToDetailsPage();
         }
       }
 
       function validateUserDetailForm() {
         event.preventDefault();
-        // Get all input values
-        const userName = document.getElementById("user-name").value;
-        const userEmail = document.getElementById("user-email").value;
-        const userContact = document.getElementById("user-contact").value;
 
-        // Get error message divs
-        const nameError = document.getElementById("user-name-error");
-        const emailError = document.getElementById("user-email-error");
-        const contactError = document.getElementById("user-contact-error");
+        const fields = [
+          {
+            id: "user-name",
+            errorId: "user-name-error",
+            message: "Please enter your name.",
+          },
+          {
+            id: "user-email",
+            errorId: "user-email-error",
+            message: "Please enter your email.",
+          },
+          {
+            id: "user-contact",
+            errorId: "user-contact-error",
+            message: "Please enter your number.",
+          },
+        ];
 
-        // Set initial error flag
         let hasError = false;
 
-        // Reset error messages
-        nameError.textContent = "";
-        emailError.textContent = "";
-        contactError.textContent = "";
+        fields.forEach(({ id, errorId, message }) => {
+          const value = document.getElementById(id).value;
+          const errorElement = document.getElementById(errorId);
+          errorElement.textContent = value ? "" : message;
+          if (!value) hasError = true;
+        });
 
-        // Validate each field and display specific error message if needed
-        if (!userName) {
-          nameError.textContent = "Please enter your name.";
-          hasError = true;
-        }
-
-        if (!userEmail) {
-          emailError.textContent = "Please enter your email.";
-          hasError = true;
-        }
-
-        if (!userContact) {
-          contactError.textContent = "Please enter your number.";
-          hasError = true;
-        }
         if (!hasError) {
           sendEmail(event);
         }
