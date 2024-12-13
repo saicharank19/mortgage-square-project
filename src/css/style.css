@@ -77,8 +77,14 @@ body a:hover {
   }
 }
 .mortgage-logo {
-  width: 180px;
+  width: 250px;
   height: auto;
+}
+@media only screen and (max-width: 600px) {
+  .mortgage-logo {
+    width: 180px;
+    height: auto;
+  }
 }
 .navbar-light .navbar-brand {
   font-size: 1em;
@@ -635,13 +641,15 @@ p.sub-para {
 }
 
 .new_top:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-/* .new_top:not(:hover) {
-  transform: scale(1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} */
+.loan-process-buttons {
+  background-color: #fff;
+  color: #175183;
+  margin-bottom: 20px;
+}
+
 /*-- details --*/
 h3.w3ls-title {
   font-size: 2.7em;
@@ -702,6 +710,157 @@ p.stap {
   margin: 1em 0 5em;
   text-align: center;
 }
+
+/* fast and easy apply*/
+
+.details-books {
+  padding: 3rem 0;
+}
+
+/* Heading Styles */
+
+.heading-agileinfo span {
+  display: block;
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+}
+
+/* Application Steps Styles */
+.application-steps {
+  counter-reset: step;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.application-steps .step {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  position: relative;
+  padding: 20px 20px 20px 70px;
+  margin-bottom: 30px;
+}
+
+.application-steps .step::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 35px;
+  height: 35px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.application-steps h4 {
+  color: #34495e;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.application-steps p {
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.application-steps ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.application-steps ul li {
+  color: #000;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  position: relative;
+  flex-basis: calc(50% - 10px);
+}
+
+.application-steps ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heading-agileinfo {
+    font-size: 2rem;
+  }
+
+  .application-steps h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading-agileinfo {
+    font-size: 1.8rem;
+  }
+
+  .application-steps .step {
+    padding-left: 60px;
+  }
+
+  .application-steps .step::before {
+    left: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .application-steps ul li {
+    flex-basis: 100%;
+  }
+}
+
+/*Common quetions*/
+
+.common-quetions-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.common-quetions {
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 6px;
+  transition: all 0.3s ease;
+}
+
+.common-quetions:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+.common-quetions .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #175183;
+}
+
+.common-quetions p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
 /*-- //stats --*/
 /* video popup */
 
@@ -2407,7 +2566,7 @@ h2.typoh2 {
 @media screen and (max-width: 991px) {
   .navbar-toggler {
     padding: 0.2rem 0.5rem;
-    background-color: #133e87;
+    background-color: #175183;
     outline: none;
     border: none;
   }
