@@ -1389,7 +1389,7 @@ a.facebook:hover {
   padding: 6em 0;
 }
 .w3layouts_getin_info h3 {
-  color: #151414;
+  color: #175183;
   letter-spacing: 4px;
   font-size: 36px;
   text-align: left;
@@ -1397,15 +1397,12 @@ a.facebook:hover {
 .w3layouts_getin a {
   font-size: 1em;
   color: #fff;
-  background: linear-gradient(to right, #1a3b67, #2c5c8c, #5b8bbb);
+  background-color: #175183;
   padding: 0.7em 2em;
   letter-spacing: 2px;
   display: inline-block;
 }
-.w3layouts_getin a:hover {
-  color: #fff;
-  background: #121012;
-}
+
 /*-- welcome --*/
 
 .welcome-left h3 {
@@ -1581,18 +1578,11 @@ ul {
 }
 
 .review-button {
-  color: #0f0e0e;
-  background: linear-gradient(to right, #1a3b67, #2c5c8c, #5b8bbb);
+  color: #fff !important;
+  background-color: #175183;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
-}
-.review-button a {
-  color: #000;
-}
-
-.review-button:hover {
-  background-color: #0a0b0d;
 }
 
 /* Optional: Mobile Responsiveness */
@@ -1606,20 +1596,19 @@ ul {
 /*--Reviews--*/
 
 /*Question*/
+/*make this button 20% more bigger than now*/
 .question-button {
-  color: #fff;
+  color: #fff !important;
   background-color: #175183;
-  padding: 10px 15px;
+  padding: 12px 18px; /* Increased from 10px 15px */
   text-align: center;
-  border-radius: 5px;
+  border-radius: 6px; /* Increased from 5px */
   text-decoration: none;
+  font-size: 1.2em; /* Added to increase text size by 20% */
+  transform: scale(1.2); /* Added to increase overall button size by 20% */
+  transition: background-color 0.3s ease;
 }
-.question-button :hover {
-  /* Reset any hover styles here */
-  /* Example to reset background hover effect */
-  color: #fff; /* Reset text color */
-  /* You can reset other hover properties similarly */
-}
+
 /*--services --*/
 
 .w3-services {
