@@ -400,59 +400,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </p>
           </div>
 
-          <div class="loan-details" id="loan-details">
-            <p>Based on a</p>
-            <select id="loanRateType">
-              <option>
-                6.44% p.a.
-                Extra&nbsp;Home&nbsp;Loan&nbsp;LVR&nbsp;60%&nbsp;or&nbsp;below
-              </option>
-              <option>
-                6.49% p.a.
-                Extra&nbsp;Home&nbsp;Loan&nbsp;LVR&nbsp;60.01%&nbsp;to&nbsp;70%
-              </option>
-              <option>
-                6.59% p.a.
-                Extra&nbsp;Home&nbsp;Loan&nbsp;LVR&nbsp;70.01%&nbsp;to&nbsp;80%
-              </option>
-              <option>6.89% p.a. Extra Home Loan LVR 80.01% to 90%</option>
-              <option>7.84% p.a. Extra Home Loan LVR 90.01% to 95%</option>
-              <option>
-                6.34% p.a. Standard Variable Rate Home Loan LVR 60% or below
-                with Wealth Package
-              </option>
-              <option>
-                6.39% p.a. Standard Variable Rate Home Loan LVR 60.01% to 70%
-                with Wealth Package
-              </option>
-              <option>
-                6.49% p.a. Standard Variable Rate Home Loan LVR 70.01% to 80%
-                with Wealth Package
-              </option>
-              <option>
-                6.79% p.a. Standard Variable Rate Home Loan LVR 80.01% to 90%
-                with Wealth Package
-              </option>
-              <option>
-                7.74% p.a. Standard Variable Rate Home Loan LVR 90.01% to 95%
-                with Wealth Package
-              </option>
-              <option>
-                6.39% p.a. 1 Year Fixed Rate Home Loan with Wealth Package
-              </option>
-              <option>
-                6.29% p.a. 2 Year Fixed Rate Home Loan with Wealth Package
-              </option>
-              <option>
-                5.89% p.a. 3 Year Fixed Rate Home Loan with Wealth Package
-              </option>
-              <option>
-                6.29% p.a. 4 Year Fixed Rate Home Loan with Wealth Package
-              </option>
-              <option>
-                6.69% p.a. 5 Year Fixed Rate Home Loan with Wealth Package
-              </option>
-            </select>
+          
             <!--div class="toggle">
 							<div class="toggle-icon"><img src="https://img.icons8.com/?size=64&id=Rgal81YYbTFz&format=png" alt="toggle between interest rate input field and products drop down" class="toggle-image"></div>
 							<span class="custom-rate">
@@ -774,13 +722,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           const loanTermYears = parseInt(
             document.getElementById("loanDuration").value
           );
-          const interestRate = parseFloat(
-            document.getElementById("loanRateType").value.match(/[\d.]+/)[0]
-          ); // Extract number from the rate text
+           // Extract number from the rate text
           const repaymentFrequency = parseInt(
             document.getElementById("repayment-details").value
           );
-
+          const interestRate = 5; // Hardcoded loan rate of 5%
           const monthlyRate = interestRate / 100 / 12;
           const numberOfPayments = loanTermYears * 12;
           const monthlyRepayment =
@@ -795,7 +741,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             .getElementById("loan-details")
             .querySelector(
               "p"
-            ).innerText = `Based on a ${interestRate}% p.a. rate over ${loanTermYears} years`;
+            )
         }
 
         function calculateRepayment() {
