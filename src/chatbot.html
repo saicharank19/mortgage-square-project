@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
+    
     <link
       rel="shortcut icon"
       type="image/png"
@@ -25,142 +27,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mortgage Chatbot</title>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: #f7f8fa;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
 
-      .chat-container {
-        width: 380px;
-        max-width: 100%;
-        background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s ease;
-      }
 
-      .chat-header {
-        background-color: #4b7bec;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        font-size: 18px;
-        font-weight: bold;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .chat-box {
-        padding: 20px;
-        background-color: #f9f9f9;
-        font-size: 14px;
-        color: #333;
-        flex-grow: 1;
-        overflow-y: auto;
-        max-height: 500px;
-      }
-
-      .message {
-        padding: 12px 15px;
-        border-radius: 10px;
-        margin-bottom: 12px;
-        max-width: 75%;
-        line-height: 1.5;
-        font-size: 14px;
-      }
-
-      .bot-message {
-        background-color: #e3e4e8;
-        text-align: left;
-        border-radius: 10px;
-        padding: 12px 20px;
-        position: relative;
-      }
-
-      .bot-message::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 20px;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid #e3e4e8;
-      }
-
-      .user-message {
-        background-color: #4b7bec;
-        color: white;
-        text-align: right;
-        margin-left: auto;
-        border-radius: 10px;
-        padding: 12px 20px;
-        position: relative;
-      }
-
-      .user-message::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        right: 20px;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid #4b7bec;
-      }
-
-      .input-box {
-        display: flex;
-        padding: 12px 16px;
-        background-color: #fff;
-        border-top: 1px solid #ddd;
-        justify-content: space-between;
-      }
-
-      .input-box input {
-        width: 80%;
-        padding: 8px 15px;
-        font-size: 14px;
-        border: 1px solid #ddd;
-        border-radius: 20px;
-        outline: none;
-        transition: all 0.2s ease;
-      }
-
-      .input-box input:focus {
-        border-color: #4b7bec;
-      }
-
-      .input-box button {
-        width: 48%;
-        padding: 10px;
-        margin: 0 4px;
-        font-size: 14px;
-        background-color: #4b7bec;
-        color: white;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .input-box button:hover {
-        background-color: #3879d6;
-      }
-
-      .message {
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      }
-    </style>
+    <!-- Bootstrap Core CSS -->
+    <link href="../src/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../src/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- font-awesome icons -->
+    <link href="../src/css/fontawesome-all.min.css" rel="stylesheet" />
+    <!-- //Custom Theme files -->
+    <link rel="stylesheet" href="../src/css/lightbox.css" />
+    <!-- For-gallery-CSS -->
+    <!-- online fonts -->
+    <!-- titles -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <!-- body -->
+    <link
+      href="//fonts.googleapis.com/css?family=Poppins:400,500,600,700,800"
+      rel="stylesheet"
+    />
+    
   </head>
+  
+	
+    <!-- header -->
+    <header>
+      <div class="top1">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            
+            <h1>
+            <a class="navbar-brand text-capitalize" href="../index.html">
+            <img
+              src="../images/blank-logo-01.jpg"
+              alt="logo"
+              class="mortgage-logo"
+              
+            />
+            <!-- Mortgage Square -->
+            </a>
+          </h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav text-center  ml-lg-auto">
+                <li class="nav-item mr-3">
+                  <a class="nav-link" href="../index.html">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item active mr-3">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                
+                <li class="nav-item  mr-3">
+                  <a class="nav-link" href="loan_calculator.html">Loan Calculator</a>
+                </li>
+                <li class="nav-item  mr-3">
+                  <a class="nav-link" href="reviews.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
   <body>
     <div class="chat-container">
       <div class="chat-header">Mortgage Chatbot</div>
